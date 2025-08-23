@@ -9,7 +9,7 @@ spec:
     namespace: homelab-dev
   project: default
   source:
-    path: homelab-gitops/apps/overlays/homelab-dev/dockerfile-generator
+    path: apps/overlays/homelab-dev/dockerfile-generator
     repoURL: git@github.com:MarkBenjaminKatamba/homelab-gitops.git
     targetRevision: HEAD
   syncPolicy:
