@@ -4,6 +4,10 @@ nameSuffix: -dev
 resources:
 - ../../bases/dockerfile-generator-backend
 
+replicas:
+- count: 1
+  name: dockerfile-generator-backend-dev
+
 patchesStrategicMerge:
   - version.yaml
 
