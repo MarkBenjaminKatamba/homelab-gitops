@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerfile-generator-frontend
+  labels:
+    app: dockerfile-generator-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dockerfile-generator-frontend
+  template:
+    metadata:
+      labels:
+        app: dockerfile-generator-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ghcr.io/markbenjaminkatamba/dockerfile-generator-frontend-dev:latest
+          ports:
+            - containerPort: 3000

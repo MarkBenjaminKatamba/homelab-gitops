@@ -1,0 +1,30 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+nameSuffix: -dev
+resources:
+- ../../bases/dockerfile-generator-backend
+
+patchesStrategicMerge:
+  - version.yaml
+
+patchesJson6902:
+- target:
+    group: apps
+    version: v1
+    kind: Deployment
+    name: dockerfile-generator-backend
+  patch: |-
+    - op: replace
+      path: /spec/template/metadata/labels/app.kubernetes.io~1name
+      value: dockerfile-generator-backend-dev
+    - op: replace
+      path: /spec/selector/matchLabels/app.kubernetes.io~1name
+      value: dockerfile-generator-backend-dev  
+- target:
+    version: v1
+    kind: Service
+    name: dockerfile-generator-backend
+  patch: |-
+    - op: replace
+      path: /spec/selector/app.kubernetes.io~1name
+      value: dockerfile-generator-backend-dev

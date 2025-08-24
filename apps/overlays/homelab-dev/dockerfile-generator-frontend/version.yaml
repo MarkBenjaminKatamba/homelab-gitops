@@ -1,0 +1,17 @@
+# This file helps to dynamically override the image tag for the dockerfile-generator-frontend deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerfile-generator-frontend
+spec:
+  selector:
+    matchLabels:
+      app: dockerfile-generator-frontend
+  template:
+    metadata:
+      labels:
+        app: dockerfile-generator-frontend
+    spec:
+      containers:
+        - name: frontend
+          image: ghcr.io/markbenjaminkatamba/dockerfile-generator-frontend-dev:develop # Here "develop" matches the GitHub branch we're pushing to.
