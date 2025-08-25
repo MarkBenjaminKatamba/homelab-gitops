@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: dockerfile-generator-backend
+  namespace: argocd
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: homelab-dev
+  project: default
+  source:
+    path: apps/overlays/homelab-dev/dockerfile-generator-backend
+    repoURL: https://github.com/MarkBenjaminKatamba/homelab-gitops
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true

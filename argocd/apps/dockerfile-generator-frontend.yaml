@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dockerfile-generator
+  name: dockerfile-generator-frontend
   namespace: argocd
 spec:
   destination:
@@ -9,7 +9,7 @@ spec:
     namespace: homelab-dev
   project: default
   source:
-    path: apps/overlays/homelab-dev/dockerfile-generator
+    path: apps/overlays/homelab-dev/dockerfile-generator-frontend
     repoURL: https://github.com/MarkBenjaminKatamba/homelab-gitops
     targetRevision: HEAD
   syncPolicy:
