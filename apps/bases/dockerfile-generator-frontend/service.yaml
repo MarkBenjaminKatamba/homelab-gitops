@@ -4,7 +4,7 @@ metadata:
   name: dockerfile-generator-frontend
 spec:
   selector:
-    app: dockerfile-generator-frontend
+    app.kubernetes.io/name: dockerfile-generator-frontend
   ports:
     - port: 80
       targetPort: 3000

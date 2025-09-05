@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: dockerfile-generator-frontend
   labels:
-    app: dockerfile-generator-frontend
+    app.kubernetes.io/name: dockerfile-generator-frontend
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: dockerfile-generator-frontend
+      app.kubernetes.io/name: dockerfile-generator-frontend
   template:
     metadata:
       labels:
-        app: dockerfile-generator-frontend
+        app.kubernetes.io/name: dockerfile-generator-frontend
     spec:
       containers:
         - name: frontend

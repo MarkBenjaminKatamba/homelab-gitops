@@ -5,7 +5,7 @@ metadata:
   name: dockerfile-generator-backend
 spec:
   selector:
-    app: dockerfile-generator-backend
+    app.kubernetes.io/name: dockerfile-generator-backend
   ports:
     - port: 80
       targetPort: 8000
