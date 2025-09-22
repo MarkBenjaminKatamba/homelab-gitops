@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: apps/overlays/homelab-dev/dockerfile-generator-frontend
-    repoURL: https://github.com/MarkBenjaminKatamba/homelab-gitops
+    repoURL: git@github.com:MarkBenjaminKatamba/homelab-gitops.git
     targetRevision: HEAD
   syncPolicy:
     automated:

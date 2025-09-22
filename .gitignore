@@ -1,5 +1,8 @@
 # ArgoCD repository credentials
 argocd/repo-credentials.yaml
+argocd/repo-credentials.txt
+argocd/argocd-homelab
+argocd/argocd-homelab.pub
 
 # Other sensitive files
 *.key
