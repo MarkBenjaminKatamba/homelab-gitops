@@ -3,6 +3,7 @@ kind: Kustomization
 nameSuffix: -dev
 resources:
 - ../../../bases/taskflow-frontend
+- ../ghcr-secret.yaml
 replicas:
 - count: 1
   name: taskflow-frontend-dev
@@ -28,5 +29,15 @@ patches:
     name: taskflow-frontend
     version: v1
 - path: version.yaml
+- patch: |-
+    - op: add
+      path: /spec/template/spec/imagePullSecrets
+      value:
+        - name: ghcr-cred
+  target:
+    group: apps
+    kind: Deployment
+    name: taskflow-frontend
+    version: v1
 
 
