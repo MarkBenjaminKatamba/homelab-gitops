@@ -15,4 +15,12 @@ Generates:
 Template variables:
 - `{{APP_NAME}}`, `{{CONTAINER_NAME}}`, `{{CONTAINER_PORT}}`, `{{IMAGE}}`, `{{ENV}}`, `{{NAMESPACE}}`, `{{REPO_URL}}`, `{{TARGET_REVISION}}`
 
+### GUI option
+
+Run the GUI to fill fields and click Generate:
+```powershell
+pwsh ./tools/scaffold-app/New-App.GUI.ps1
+```
+The GUI calls the same `New-App.ps1` under the hood.
+
 

@@ -15,7 +15,7 @@ spec:
         app.kubernetes.io/name: taskflow-frontend
     spec:
       containers:
-        - name: api
+        - name: taskflow-frontend
           image: ghcr.io/markbenjaminkatamba/taskflow:latest
           ports:
             - containerPort: 8080

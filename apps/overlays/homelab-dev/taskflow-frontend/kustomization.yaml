@@ -1,19 +1,19 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-nameSuffix: -homelab-dev
+nameSuffix: -dev
 resources:
 - ../../../bases/taskflow-frontend
 replicas:
 - count: 1
-  name: taskflow-frontend-homelab-dev
+  name: taskflow-frontend-dev
 patches:
 - patch: |-
     - op: replace
       path: /spec/template/metadata/labels/app.kubernetes.io~1name
-      value: taskflow-frontend-homelab-dev
+      value: taskflow-frontend-dev
     - op: replace
       path: /spec/selector/matchLabels/app.kubernetes.io~1name
-      value: taskflow-frontend-homelab-dev
+      value: taskflow-frontend-dev
   target:
     group: apps
     kind: Deployment
@@ -22,7 +22,7 @@ patches:
 - patch: |-
     - op: replace
       path: /spec/selector/app.kubernetes.io~1name
-      value: taskflow-frontend-homelab-dev
+      value: taskflow-frontend-dev
   target:
     kind: Service
     name: taskflow-frontend
