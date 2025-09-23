@@ -14,4 +14,4 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/markbenjaminkatamba/dockerfile-generator-backend-dev:develop-e9f3bad5eeae485f0dd09a37ce86cad271f1a996
+          image: ghcr.io/markbenjaminkatamba/dockerfile-generator-backend-dev:develop-fd20f5da40220762a01f881b1ad781e9d0479220
