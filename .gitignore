@@ -18,7 +18,7 @@ argocd/argocd-homelab.pub
 # Kubernetes secrets
 *-secret.yaml
 *-secrets.yaml
-*secret*.yaml
+# *secret*.yaml
 *secrets*.yaml
 
 # Logs
