@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskflow-backend
+  labels:
+    app.kubernetes.io/name: taskflow-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: taskflow-backend
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: taskflow-backend
+    spec:
+      containers:
+        - name: taskflow-backend
+          image: ghcr.io/markbenjaminkatamba/taskflow-backend:latest
+          ports:
+            - containerPort: 8080
+
+

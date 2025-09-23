@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: taskflow-frontend
-          image: ghcr.io/markbenjaminkatamba/taskflow:latest
+          image: ghcr.io/markbenjaminkatamba/taskflow-frontend:latest
           ports:
             - containerPort: 8080
 
