@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: taskflow-frontend
-          image: ghcr.io/markbenjaminkatamba/taskflow-frontend-dev:main-1a8cb64c542358b246692b348e4cbc8d4cc8c051
+          image: ghcr.io/markbenjaminkatamba/taskflow-frontend-dev:main-e00ab7a1f20466766a2797d66aa8ddfed6c15edd
 
 
