@@ -1,0 +1,19 @@
+# This file helps to dynamically override the image tag for the {{APP_NAME}} deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{APP_NAME}}
+spec:
+  selector:
+    matchLabels:
+      app: {{APP_NAME}}
+  template:
+    metadata:
+      labels:
+        app: {{APP_NAME}}
+    spec:
+      containers:
+        - name: {{CONTAINER_NAME}}
+          image: {{IMAGE}}
+
+

@@ -1,0 +1,19 @@
+# This file helps to dynamically override the image tag for the taskflow-frontend deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: taskflow-frontend
+spec:
+  selector:
+    matchLabels:
+      app: taskflow-frontend
+  template:
+    metadata:
+      labels:
+        app: taskflow-frontend
+    spec:
+      containers:
+        - name: api
+          image: ghcr.io/markbenjaminkatamba/taskflow:latest
+
+
