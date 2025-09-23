@@ -19,3 +19,10 @@ spec:
           image: ghcr.io/markbenjaminkatamba/dockerfile-generator-frontend-dev:latest
           ports:
             - containerPort: 3000
+          resources:
+            requests:
+              cpu: 10m
+              memory: 128Mi
+            limits:
+              cpu: 100m
+              memory: 512Mi
