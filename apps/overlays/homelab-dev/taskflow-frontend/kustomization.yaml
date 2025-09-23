@@ -3,7 +3,6 @@ kind: Kustomization
 nameSuffix: -dev
 resources:
 - ../../../bases/taskflow-frontend
-- ../ghcr-credentials.yaml
 replicas:
 - count: 1
   name: taskflow-frontend-dev
