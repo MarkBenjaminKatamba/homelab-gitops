@@ -7,6 +7,6 @@ spec:
     app.kubernetes.io/name: taskflow-frontend
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 80
 
 

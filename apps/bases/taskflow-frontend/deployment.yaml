@@ -18,7 +18,7 @@ spec:
         - name: taskflow-frontend
           image: ghcr.io/markbenjaminkatamba/taskflow-frontend:latest
           ports:
-            - containerPort: 8080
+            - containerPort: 80
           resources:
             requests:
               cpu: 10m
