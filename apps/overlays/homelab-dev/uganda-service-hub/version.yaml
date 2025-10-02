@@ -1,0 +1,19 @@
+# This file helps to dynamically override the image tag for the uganda-service-hub deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uganda-service-hub
+spec:
+  selector:
+    matchLabels:
+      app: uganda-service-hub
+  template:
+    metadata:
+      labels:
+        app: uganda-service-hub
+    spec:
+      containers:
+        - name: uganda-service-hub
+          image: ghcr.io/you/app:latest
+
+
