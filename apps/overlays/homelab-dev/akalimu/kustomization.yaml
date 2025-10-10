@@ -28,5 +28,14 @@ patches:
     name: akalimu
     version: v1
 - path: version.yaml
-
+- patch: |-
+    - op: add
+      path: /spec/template/spec/imagePullSecrets
+      value:
+        - name: ghcr-cred
+  target:
+    group: apps
+    kind: Deployment
+    name: akalimu
+    version: v1
 
