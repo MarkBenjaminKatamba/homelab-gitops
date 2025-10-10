@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akalimu
+  labels:
+    app.kubernetes.io/name: akalimu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: akalimu
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: akalimu
+    spec:
+      containers:
+        - name: akalimu
+          image: ghcr.io/markbenjaminkatamba/akalimu:latest
+          ports:
+            - containerPort: 8088
+
+

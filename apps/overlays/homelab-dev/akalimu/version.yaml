@@ -1,0 +1,19 @@
+# This file helps to dynamically override the image tag for the akalimu deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: akalimu
+spec:
+  selector:
+    matchLabels:
+      app: akalimu
+  template:
+    metadata:
+      labels:
+        app: akalimu
+    spec:
+      containers:
+        - name: akalimu
+          image: ghcr.io/markbenjaminkatamba/akalimu:latest
+
+
