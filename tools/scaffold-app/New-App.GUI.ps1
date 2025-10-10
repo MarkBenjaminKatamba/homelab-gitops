@@ -105,7 +105,7 @@ $btnRun.Add_Click({
         $p.WaitForExit()
         if ($stdOut) { Append-Out $stdOut }
         if ($stdErr) { Append-Out $stdErr }
-        Append-Out ("Exited with code " + $p.ExitCode)
+        Append-Out ("Success! Exited with code " + $p.ExitCode)
     }
     catch {
         Append-Out ("Error: " + $_.Exception.Message)
