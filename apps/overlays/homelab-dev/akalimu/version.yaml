@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: akalimu
-          image: ghcr.io/markbenjaminkatamba/akalimu:latest
+          image: ghcr.io/markbenjaminkatamba/akalimu-dev:main-f4f170bc177433178dc37cf356c29d5505df5783
 
 
