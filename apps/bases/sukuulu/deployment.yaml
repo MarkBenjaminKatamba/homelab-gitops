@@ -19,5 +19,13 @@ spec:
           image: ghcr.io/markbenjaminkatamba/sukuulu:latest
           ports:
             - containerPort: 8080
+            
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+            limits:
+              cpu: 100m
+              memory: 512Mi
 
 
