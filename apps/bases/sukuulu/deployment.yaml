@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sukuulu
+  labels:
+    app.kubernetes.io/name: sukuulu
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: sukuulu
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: sukuulu
+    spec:
+      containers:
+        - name: sukuulu
+          image: ghcr.io/markbenjaminkatamba/sukuulu:latest
+          ports:
+            - containerPort: 8080
+
+

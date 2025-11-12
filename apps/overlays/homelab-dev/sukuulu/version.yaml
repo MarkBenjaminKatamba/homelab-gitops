@@ -1,0 +1,19 @@
+# This file helps to dynamically override the image tag for the sukuulu deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sukuulu
+spec:
+  selector:
+    matchLabels:
+      app: sukuulu
+  template:
+    metadata:
+      labels:
+        app: sukuulu
+    spec:
+      containers:
+        - name: sukuulu
+          image: ghcr.io/markbenjaminkatamba/sukuulu:latest
+
+
