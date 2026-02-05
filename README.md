@@ -78,8 +78,9 @@ This pattern is repeated for all apps, which keeps the repo consistent and easy 
 
 Because everything is Git‑driven, my deploy process is:
 
-1. **Edit manifests** in this repo (for example, update the image tag in a `version.yaml` or adjust resources in a base `deployment.yaml`).
-2. **Commit and push** to the `master` branch on GitHub.
+1. **Edit manifests** in this repo (for example, update the image tag in a `version.yaml` by pushing a commit to the app repository, or simply adjust resources in a base `deployment.yaml`).
+2. **Commit and push** to the `master` branch on GitHub. 
+If the commit and push has been made on the actual app repo, the Github Actions workflow will be triggered, it will build the image, push it to GHCR, and automatically update the image tag in the specific app's `version.yaml` file inside the overlay directory of that particular app.
 3. **Argo CD detects the change**:
    - Pulls the latest commit from GitHub.
    - Renders the corresponding Kustomize overlay.

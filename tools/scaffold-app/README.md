@@ -1,6 +1,6 @@
 ### Scaffold new app manifests
 
-Run from repo root or any path; script resolves paths automatically.
+Run from repo root or any path; the script resolves paths automatically.
 
 Example:
 ```powershell
