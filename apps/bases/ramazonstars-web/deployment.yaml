@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ramazonstars-web
+  labels:
+    app.kubernetes.io/name: ramazonstars-web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: ramazonstars-web
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: ramazonstars-web
+    spec:
+      containers:
+        - name: ramazonstars-web
+          image: ghcr.io/MarkBenjaminKatamba/ramazonstars-web:latest
+          ports:
+            - containerPort: 8080
+
+

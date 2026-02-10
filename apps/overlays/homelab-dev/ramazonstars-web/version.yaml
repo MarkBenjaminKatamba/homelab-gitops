@@ -1,0 +1,19 @@
+# This file helps to dynamically override the image tag for the ramazonstars-web deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ramazonstars-web
+spec:
+  selector:
+    matchLabels:
+      app: ramazonstars-web
+  template:
+    metadata:
+      labels:
+        app: ramazonstars-web
+    spec:
+      containers:
+        - name: ramazonstars-web
+          image: ghcr.io/MarkBenjaminKatamba/ramazonstars-web:latest
+
+
