@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: sukuulu
-          image: ghcr.io/markbenjaminkatamba/sukuulu:main-a2df04acc000c9772b68cb42ca9bcc10e404f94c
+          image: ghcr.io/markbenjaminkatamba/sukuulu:main-a3793cd1c06042947579e94e12b55dfbbe809d14
 
 
