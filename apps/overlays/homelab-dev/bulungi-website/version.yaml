@@ -1,0 +1,27 @@
+# This file helps to dynamically override the image tag for the bulungi-website deployment
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bulungi-website
+spec:
+  selector:
+    matchLabels:
+      app: bulungi-website
+  template:
+    metadata:
+      labels:
+        app: bulungi-website
+    spec:
+      containers:
+        - name: bulungi-website
+          image: ghcr.io/MarkBenjaminKatamba/bulungi-website:latest
+
+          resources:
+            requests:
+              cpu: 10m
+              memory: 20Mi
+            limits:
+              cpu: 200m
+              memory: 256Mi
+
+
