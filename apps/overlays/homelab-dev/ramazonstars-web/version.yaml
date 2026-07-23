@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: ramazonstars-web
-          image: ghcr.io/MarkBenjaminKatamba/ramazonstars-web:main-c2da9ac1a7a6115c4278bd7979d4d06942efdf27
+          image: ghcr.io/MarkBenjaminKatamba/ramazonstars-web:main-75a75ca9b61346e77a60a414ad2680a68c058bee
 
 
