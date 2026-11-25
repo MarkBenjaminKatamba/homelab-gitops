@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: bulungi-website
-          image: ghcr.io/MarkBenjaminKatamba/bulungi-website:latest
+          image: ghcr.io/markbenjaminkatamba/bulungi-website:latest
           ports:
             - containerPort: 8080
           resources:
