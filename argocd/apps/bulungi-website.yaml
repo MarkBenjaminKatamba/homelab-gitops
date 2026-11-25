@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: apps/overlays/homelab-dev/bulungi-website
-    repoURL: https://github.com/MarkBenjaminKatamba/bulungi-bespoke-showcase.git
+    repoURL: git@github.com:MarkBenjaminKatamba/homelab-gitops.git
     targetRevision: HEAD
   syncPolicy:
     automated:
