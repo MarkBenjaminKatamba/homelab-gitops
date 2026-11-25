@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: bulungi-website
-          image: ghcr.io/markbenjaminkatamba/bulungi-website:main-39f75fa5282307c324a88e53de34628a41ae0cbd
+          image: ghcr.io/markbenjaminkatamba/bulungi-website:main-876818c304af1e2e9a4d7ea76671a3d74523da6c
 
           resources:
             requests:
